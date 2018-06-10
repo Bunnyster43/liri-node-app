@@ -49,21 +49,22 @@ function myTweets() {
 }
 
 //Spotify
-
 //function spotifySong(){
-//  var spotify = new spotify({
-//    id: '3fc069d43e7b4eb8b5b2a2ea53c8df0c',
-//    secret: '70ac4a227c884202b4d58c4b76050c14',
-//  })
+//var spotify = new spotify({
+//  id: '3fc069d43e7b4eb8b5b2a2ea53c8df0c',
+//  secret: '70ac4a227c884202b4d58c4b76050c14',
+//})
 //}
-
-// function spotifySong() {
-//  var songName = process.argv[3];
-//  if(!songName){
+//{
+//if(!songName){
 //    songName = "I Want It That Way";
 //  }
-//  params = songName;
-//  spotify.search({ type: "track", query: params }, function(err, data) {
+//{
+//var spotify = require('node-spotify-api'); //.request('https://api.spotify.com/v1/tracks/7yCPwWs66K8Ba5lFuU2bcx')
+//  spotify.search({
+//    type: 'track',
+//    query: value + '&limit=1&'
+//}, function(err, data) {
 //    if(!err){
 //      var songInfo = data.tracks.items;
 //      for (var i = 0; i < 5; i++) {
@@ -81,11 +82,11 @@ function myTweets() {
 //    }	else {
 //      console.log("Error :"+ err);
 //      return;
-//    }
-//  });
+//    }}
+//  ,);
 //};
 
-// Movie
+ //Movie
 function movieThis(){
   var movie = process.argv[3];
   if(!movie){
@@ -116,7 +117,7 @@ function movieThis(){
 
 //Do What It Says
 function doWhatItSays() {
-  fs.writeFile("random.txt", "spotify-this-sohiuung: I Want It That Way", "utf8", function(err){
+  fs.writeFile("random.txt", "spotify-this-song: I Want It That Way", "utf8", function(err){
     if (err) {
       return console.log(err);
     } else {
@@ -134,4 +135,3 @@ function log(logResults) {
     }
   });
 }
-
