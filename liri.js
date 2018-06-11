@@ -55,7 +55,7 @@ function spotifySong(){
 var spotify = spotifySong({
 id: '3fc069d43e7b4eb8b5b2a2ea53c8df0c',
 secret: '70ac4a227c884202b4d58c4b76050c14',
-})
+});
 }
 {
 function spotifySong() {
