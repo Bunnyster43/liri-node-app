@@ -52,13 +52,10 @@ function myTweets() {
 
 //Spotify
 function spotifySong(){
-var spotify = new Spotify({
-  id: process.env.SPOTIFY_ID,
-  secret: process.env.SPOTIFY_SECRET
-})
-}
-{
-function spotifySong() {
+var spotify = spotifySong({
+id: process.env.SPOTIFY_ID,
+secret: process.env.SPOTIFY_SECRET
+});
 var songname = "";
 for (var i = 3; i < process.argv.length; i++) {
 songname += process.argv[i] + "";
@@ -74,9 +71,7 @@ console.log("Song name: " + data.tracks.items[7].name);
 console.log("Link: " + data.tracks.items[7].preview_url);
 console.log(spotifyResults);
 log(spotifyResults);
-}
-});
-}
+}});
 }}
 
  //Movie
