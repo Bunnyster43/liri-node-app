@@ -69,7 +69,7 @@ if (error) {
   console.log('Album Name: ' + data.tracks.items[7].album.name);
   console.log("Song name: " + data.tracks.items[7].name);
   console.log("Link: " + data.tracks.items[7].preview_url);
-  
+
   console.log(spotifyResults);
   log(spotifyResults);
 }});
@@ -90,7 +90,7 @@ function movieThis(){
       "Title: " + movieObject.Title+"\r\n"+
       "Year: " + movieObject.Year+"\r\n"+
       "Imdb Rating: " + movieObject.imdbRating+"\r\n"+
-      //"Rotten Tomatoes Rating: " + movieObject.tomatoRating+"\r\n"+
+      "Rotten Tomatoes Rating: " + movieObject.tomatoRating+"\r\n"+
       "Country: " + movieObject.Country+"\r\n"+
       "Language: " + movieObject.Language+"\r\n"+
       "Plot: " + movieObject.Plot+"\r\n"+
