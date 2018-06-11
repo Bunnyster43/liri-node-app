@@ -75,20 +75,6 @@ console.log("Link: " + data.tracks.items[7].preview_url);
 console.log(spotifyResults);
 log(spotifyResults);
 }
-
-});
-}else {
-spotify.search({ type: "track", query: songname, limit: "1"}, function(error, data) {
-if (error) {
-return console.log("Error occurred: " + error);
-}else {
-console.log("Artists: " + data.tracks.items[0].artists[0].name);
-console.log("Album Name: " + data.tracks.items[0].album.name);
-console.log("Song name: " + data.tracks.items[0].name);
-console.log("Link: " + data.tracks.items[0].preview_url);
-console.log(spotifyResults);
-log(spotifyResults);
-}
 });
 }
 }}
