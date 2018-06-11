@@ -53,24 +53,25 @@ function myTweets() {
 //Spotify
 function spotifySong(){
 var spotify = spotifySong({
-id: process.env.SPOTIFY_ID,
-secret: process.env.SPOTIFY_SECRET
+  id: process.env.SPOTIFY_ID,
+  secret: process.env.SPOTIFY_SECRET
 });
 var songname = "";
-for (var i = 3; i < process.argv.length; i++) {
-songname += process.argv[i] + "";
+  for (var i = 3; i < process.argv.length; i++) {
+  songname += process.argv[i] + "";
 }
 if(songname === ""){
-spotify.search({type: "track", query: "I Want It That Way"}, function(error,data) {
+  spotify.search({type: "track", query: "I Want It That Way"}, function(error,data) {
 if (error) {
-return console.log("Error occurred: " + error);
+  return console.log("Error occurred: " + error);
 }else {
-console.log("Artists: " + data.tracks.items[7].artists[0].name);
-console.log('Album Name: ' + data.tracks.items[7].album.name);
-console.log("Song name: " + data.tracks.items[7].name);
-console.log("Link: " + data.tracks.items[7].preview_url);
-console.log(spotifyResults);
-log(spotifyResults);
+  console.log("Artists: " + data.tracks.items[7].artists[0].name);
+  console.log('Album Name: ' + data.tracks.items[7].album.name);
+  console.log("Song name: " + data.tracks.items[7].name);
+  console.log("Link: " + data.tracks.items[7].preview_url);
+  
+  console.log(spotifyResults);
+  log(spotifyResults);
 }});
 }}
 
