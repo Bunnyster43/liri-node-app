@@ -22,10 +22,10 @@ switch(liriArgument) {
 // Twitter
 function myTweets() {
   var client = new twitter({
-    consumer_key: 'EhgmBD8cBs6A381NZLMh4cumL',
-    consumer_secret: 'pFxnZSm8lfCLVDtr8lYga6GNEd94shdbKlYSe3HLUU3lYeaP8i',
-    access_token_key: '1306315945-eXh2mOQ4SjOSkT4zKXSndLnG2sATkcLKJS2uiVM',
-    access_token_secret: 'tHibqVAAXYj6uBiDCIt0wBfOtPhXpL6Ofe7PPhiwVrWVv',
+    consumer_key: process.env.TWITTER_CONSUMER_KEY,
+    consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
+    access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
+    access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
   });
   var twitterUsername = process.argv[3];
   if(!twitterUsername){
@@ -52,10 +52,10 @@ function myTweets() {
 
 //Spotify
 function spotifySong(){
-var spotify = spotifySong({
-id: '3fc069d43e7b4eb8b5b2a2ea53c8df0c',
-secret: '70ac4a227c884202b4d58c4b76050c14',
-});
+var spotify = new Spotify({
+  id: process.env.SPOTIFY_ID,
+  secret: process.env.SPOTIFY_SECRET
+})
 }
 {
 function spotifySong() {
